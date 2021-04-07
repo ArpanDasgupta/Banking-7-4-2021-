@@ -1,0 +1,7 @@
+USE [Banking]
+GO
+
+CREATE procedure [dbo].[UpdateTranDetails] 
+@Sender_Acc bigint, @Receiver_Acc bigint, @Rec_IFSC nchar(10), @Amount money, @Transaction_time datetime
+as
+INSERT INTO TransactionDetails VALUES(@Sender_Acc,@Receiver_Acc,@Rec_IFSC, @Amount,@Transaction_time)
